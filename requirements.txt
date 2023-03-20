@@ -2,3 +2,4 @@ fastapi
 mysql-connector-python
 pandas
 python-dotenv
+SQLAlchemy
