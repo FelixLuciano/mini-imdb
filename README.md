@@ -13,6 +13,10 @@ MYSQL_USER="user"
 MYSQL_PASSWORD="pass"
 ```
 
+```sh
+uvicorn src/app:app --reload
+```
+
 ## Authors
 
 <table width="100%">
