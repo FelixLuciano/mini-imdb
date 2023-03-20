@@ -1,0 +1,16 @@
+version: '3'
+name: Megadados
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: MySQL
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+volumes:
+  db_data:
