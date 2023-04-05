@@ -1,6 +1,7 @@
 fastapi
 mysql-connector-python
 pandas
+pydantic
 python-dotenv
 SQLAlchemy
 uvicorn[standard]
