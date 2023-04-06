@@ -1,7 +1,9 @@
+from typing import List
+
 from .schemas import Filme, Avaliacao
 
 
-filmes = [
+filmes: List[Filme] = [
     Filme(
         id_filme=0,
         titulo="Filme teste",
@@ -12,7 +14,7 @@ filmes = [
     ),
 ]
 
-avaliacoes = [
+avaliacoes: List[Avaliacao] = [
     Avaliacao(
         id_avaliacao=0,
         id_filme=0,

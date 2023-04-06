@@ -14,7 +14,7 @@ MYSQL_PASSWORD="pass"
 ```
 
 ```sh
-uvicorn src/app:app --reload
+uvicorn src:app --reload
 ```
 
 ## Authors
