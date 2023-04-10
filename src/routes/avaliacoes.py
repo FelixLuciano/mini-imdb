@@ -70,6 +70,8 @@ async def cria_avaliacao(
     # Auto incremento do ID
     avaliacao.id_avaliacao = avaliacoes[-1].id_avaliacao + 1
 
+    avaliacoes.append(avaliacao)
+
     return avaliacao
 
 

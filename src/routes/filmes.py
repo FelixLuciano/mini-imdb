@@ -39,6 +39,8 @@ async def cria_filme(filme: Filme):
     # Auto incremento do ID
     filme.id_filme = filmes[-1].id_filme + 1
 
+    filmes.append(filme)
+
     return filme
 
 
