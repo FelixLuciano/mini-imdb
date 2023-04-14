@@ -17,6 +17,9 @@ MYSQL_PASSWORD="pass"
 uvicorn src:app --reload
 ```
 
+## Link do Video
+https://www.youtube.com/watch?v=3wDorhweXe4
+
 ## Authors
 
 <table width="100%">
