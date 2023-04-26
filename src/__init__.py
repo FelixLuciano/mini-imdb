@@ -1,6 +1,11 @@
+from dotenv import load_dotenv
 from fastapi import FastAPI
 
-from .view import router
+
+load_dotenv()
+
+from .database import Base, engine
+from .views import router
 
 
 app = FastAPI(
@@ -10,3 +15,4 @@ app = FastAPI(
 )
 
 app.include_router(router)
+Base.metadata.create_all(engine)

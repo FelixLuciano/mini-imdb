@@ -1,24 +1,43 @@
 [Maciel Calebe Vidal, Dr](https://www.linkedin.com/in/macielvidal/). Megadados.
 [Insper](https://www.insper.edu.br), 2023.
 
-# Elements of Big Data
+# Mini IMDB
 
 Hello World!
 
-```sh
-# .env
-MYSQL_ROOT_PASSWORD="admin"
-MYSQL_DATABASE="main"
-MYSQL_USER="user"
-MYSQL_PASSWORD="pass"
-```
+## Usage
 
-```sh
-uvicorn src:app --reload
-```
+To use this application, please follow these steps:
 
-## Link do Video
-https://www.youtube.com/watch?v=3wDorhweXe4
+1.  Set up your environment and install the required libraries by running the following commands:
+    - On Linux/macOS:
+        ```sh
+        python3 -m venv .venv
+        pip install -r requirements.txt
+        source ./venv/Scripts/activate
+        ```
+    - On Windows
+        ```ps
+        python -m venv .venv
+        pip install -r requirements.txt
+        .\venv\Scripts\activate
+        ```
+
+2.  Create an environment variables file by running one of the following commands, depending on your operating system:
+    - On Linux/macOS/PowerShell
+        ```sh
+        mv .env.example .env
+        ```
+    - On Windows CMD
+        ```cmd
+        move .env.example .env
+        ```
+3.  Fill the `.env` file with the actual acees credentials to your database.
+
+4. To start the server with auto-reload, run the following command:
+    ```sh
+    uvicorn src:app --reload
+    ```
 
 ## Authors
 
