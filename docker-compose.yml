@@ -1,10 +1,10 @@
 version: '3'
-name: Megadados
+name: Mini-IMDB
 
 services:
   db:
-    image: mysql:8.0
     container_name: MySQL
+    image: mysql:8.0
     env_file:
       - .env
     ports:

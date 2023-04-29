@@ -1,24 +1,51 @@
 [Maciel Calebe Vidal, Dr](https://www.linkedin.com/in/macielvidal/). Megadados.
 [Insper](https://www.insper.edu.br), 2023.
 
-# Elements of Big Data
+# Mini IMDB
 
-Hello World!
+This project uses MySQL as a relational database to store information about movies and their respective ratings. The communication between the database and the application is done through the MySQLAlchemy ORM, which allows for a more intuitive and easy interaction with the database. The application was developed using the FastAPI framework and follows the RESTful architecture, which makes the API easy to use and intuitive for users.
 
-```sh
-# .env
-MYSQL_ROOT_PASSWORD="admin"
-MYSQL_DATABASE="main"
-MYSQL_USER="user"
-MYSQL_PASSWORD="pass"
-```
+## Database model
 
-```sh
-uvicorn src:app --reload
-```
+![entity–attribute-relationship diagram](assets/image/er-diagram.svg)
 
-## Link do Video
-https://www.youtube.com/watch?v=3wDorhweXe4
+## Usage
+
+To use this application, please follow these steps:
+
+1.  Set up your environment and install the required libraries by running the following commands:
+    - On Linux/macOS:
+        ```sh
+        python3 -m venv .venv
+        pip install -r requirements.txt
+        source ./venv/Scripts/activate
+        ```
+    - On Windows
+        ```ps
+        python -m venv .venv
+        pip install -r requirements.txt
+        .\venv\Scripts\activate
+        ```
+
+2.  Create an environment variables file by running one of the following commands, depending on your operating system:
+    - On Linux/macOS/PowerShell
+        ```sh
+        mv .env.example .env
+        ```
+    - On Windows CMD
+        ```cmd
+        move .env.example .env
+        ```
+3.  Fill the `.env` file with the actual acees credentials to your database.
+
+4. Connect [MySQL Workbench](https://www.mysql.com/products/workbench) into the server and run the [`sql/schema.sql`](sql/schema.sql) script to create the `mini_imdb` database.
+
+5. To start the server with auto-reload, run the following command:
+    ```sh
+    uvicorn src:app --reload
+    ```
+
+6. See the docs at [localhost:8000/docs](http://localhost:8000/docs).
 
 ## Authors
 
@@ -40,6 +67,14 @@ https://www.youtube.com/watch?v=3wDorhweXe4
         </td>
     </tr>
 </table>
+
+### Sprint Reports
+
+#### Sprint #1: RESTful API
+[Watch the video](https://youtu.be/3wDorhweXe4).
+
+#### Sprint #2: Object-Relational Mapping
+[Watch the video](https://youtu.be/rSOF5DPaQ1o).
 
 ## License
 
