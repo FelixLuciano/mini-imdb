@@ -3,7 +3,11 @@
 
 # Mini IMDB
 
-Hello World!
+This project uses MySQL as a relational database to store information about movies and their respective ratings. The communication between the database and the application is done through the MySQLAlchemy ORM, which allows for a more intuitive and easy interaction with the database. The application was developed using the FastAPI framework and follows the RESTful architecture, which makes the API easy to use and intuitive for users.
+
+## Database model
+
+![entity–attribute-relationship diagram](assets/image/er-diagram.svg)
 
 ## Usage
 
@@ -34,12 +38,14 @@ To use this application, please follow these steps:
         ```
 3.  Fill the `.env` file with the actual acees credentials to your database.
 
-4. To start the server with auto-reload, run the following command:
+4. Connect [MySQL Workbench](https://www.mysql.com/products/workbench) into the server and run the [`sql/schema.sql`](sql/schema.sql) script to create the `mini_imdb` database.
+
+5. To start the server with auto-reload, run the following command:
     ```sh
     uvicorn src:app --reload
     ```
 
-4. See the docs at [localhost:8000/docs](http://localhost:8000/docs).
+6. See the docs at [localhost:8000/docs](http://localhost:8000/docs).
 
 ## Authors
 
@@ -61,6 +67,14 @@ To use this application, please follow these steps:
         </td>
     </tr>
 </table>
+
+### Sprint Reports
+
+#### Sprint 1: RESTful API
+[Watch the video](https://youtu.be/3wDorhweXe4).
+
+#### Sprint 1: Object-Relational Mapping
+[Watch the video](https://youtu.be/3wDorhweXe4).
 
 ## License
 

@@ -9,7 +9,7 @@ from .views import router
 
 
 app = FastAPI(
-    title="Mini IMDB",
+    title="Mini IMDB 🎬",
     description="Projeto da disciplina de Megadados",
     version="0.1.0",
 )

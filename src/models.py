@@ -24,5 +24,5 @@ class Avaliacao(Base):
 
     id_avaliacao = Column(Integer(), primary_key=True, autoincrement=True)
     id_filme     = Column(Integer(), ForeignKey("filmes.id_filme"), nullable=False)
-    nota         = Column(DECIMAL(2, 1), nullable=False)
+    nota         = Column(DECIMAL(3, 1), nullable=False)
     comentario   = Column(String(1_000), nullable=False)

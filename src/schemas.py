@@ -4,7 +4,7 @@ from typing import Optional
 from pydantic import BaseModel, Field, condecimal
 
 
-class Classificação_enum(Enum):
+class Classificação_enum(str, Enum):
     """"Faixas de classificação do Sistema de Classificação Indicativa Brasileiro"""
     LIVRE = "LIVRE"
     MENORES_DE_10_ANOS = "Não recomendado para menores de 10 anos"
@@ -79,14 +79,9 @@ class Filme(Filme_base):
 
 
 class Avaliacao_base(BaseModel):
-    """Avaliação base de um filme feita por um usuário"""
+    """Avaliação base feita por um usuário"""
 
-    id_filme: int = Field(
-        title="Identificador do filme avaliado.",
-        description="Inteiro positivo.",
-        ge=1,
-    )
-    nota: condecimal(ge=0, le=10, max_digits=1, decimal_places=1) = Field(
+    nota: condecimal(ge=0, le=10, max_digits=3, decimal_places=1) = Field(
         title="Nota atribuída ao filme.",
         description="Número real entre 0 e 10.",
         example=8.5,
@@ -98,9 +93,12 @@ class Avaliacao_base(BaseModel):
         example="Um clássico do cinema.",
     )
 
+    class Config:
+        orm_mode = True
 
-class Avaliacao(Avaliacao_base):
-    """Avaliação de um filme feita por um usuário"""
+
+class Avaliacao_filme(Avaliacao_base):
+    """Avaliação base de um filme feita por um usuário"""
 
     id_avaliacao: Optional[int] = Field(
         title="ID único da avaliação na base de dados.",
@@ -108,5 +106,12 @@ class Avaliacao(Avaliacao_base):
         ge=1,
     )
 
-    class Config:
-        orm_mode = True
+
+class Avaliacao(Avaliacao_filme):
+    """Avaliação de um filme feita por um usuário"""
+
+    id_filme: int = Field(
+        title="Identificador do filme avaliado.",
+        description="Inteiro positivo.",
+        ge=1,
+    )
