@@ -70,11 +70,11 @@ To use this application, please follow these steps:
 
 ### Sprint Reports
 
-#### Sprint 1: RESTful API
+#### Sprint #1: RESTful API
 [Watch the video](https://youtu.be/3wDorhweXe4).
 
-#### Sprint 1: Object-Relational Mapping
-[Watch the video](https://youtu.be/3wDorhweXe4).
+#### Sprint #2: Object-Relational Mapping
+[Watch the video](https://youtu.be/rSOF5DPaQ1o).
 
 ## License
 

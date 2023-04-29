@@ -66,7 +66,6 @@ async def cria_avaliacao(
         )
 
     new_avaliacao = Avaliacao_model(id_filme=id_filme, **avaliacao.dict())
-    print(new_avaliacao)
 
     db.add(new_avaliacao)
     db.commit()
