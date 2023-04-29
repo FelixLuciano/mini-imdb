@@ -13,7 +13,7 @@ router = APIRouter(prefix="/avaliacoes", tags=["Avaliações"])
 #     path="/"
 # )
 # async def lista_avaliacoes() -> List[Avaliacao]:
-#     """Lista todas as avaliações na base de dados."""
+#      """Lista todas as avaliações na base de dados."""
 #     avaliacoes_serialized = [
 #         avaliacoe.dict()
 #         for avaliacoe in avaliacoes

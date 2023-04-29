@@ -39,6 +39,8 @@ To use this application, please follow these steps:
     uvicorn src:app --reload
     ```
 
+4. See the docs at [localhost:8000/docs](http://localhost:8000/docs).
+
 ## Authors
 
 <table width="100%">
